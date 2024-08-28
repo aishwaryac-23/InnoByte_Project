@@ -1,0 +1,46 @@
+.container11 {
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* Three equal columns */
+    grid-template-rows: repeat(3, 200px); /* Three equal rows with fixed height */
+    gap: 10px; /* Add some space between the grid items */
+}
+
+.container11 .box11 {
+    position: relative;
+    background: #ccc;
+    border: 1px solid #aaa; /* Add a border */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Add a shadow */
+    transition: transform 0.3s, box-shadow 0.3s; /* Add transition for hover effect */
+    height: 100%; /* Ensure all boxes have the same height */
+    width: 100%; /* Ensure all boxes have the same width */
+}
+
+.container11 .box11:hover {
+    transform: scale(1.05); /* Slightly enlarge the box on hover */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Enhance the shadow on hover */
+}
+
+.container11 .box11 img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 5px; /* Add rounded corners to images */
+}
+
+@media (max-width: 991px) {
+    .container11 {
+        grid-template-columns: repeat(2, 1fr); /* Two columns for smaller screens */
+        grid-template-rows: repeat(5, 250px); /* Adjust height for smaller screens */
+    }
+}
+
+@media (max-width: 768px) {
+    .container11 {
+        grid-template-columns: 1fr; /* Single column for smaller screens */
+        grid-template-rows: repeat(7, 200px); /* Adjust height for smaller screens */
+    }
+}
